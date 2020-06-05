@@ -1,7 +1,9 @@
 def fib(n):
-    if (n <= 2):
-        return 1
-    return fib(n-1) + fib(n-2)
+    def _fib(n, l):
+        if (n >= len(l)):
+            l.insert(n, _fib(n-1, l)+_fib(n-2, l))
+        return l[n]
+    return _fib(n, list((1, 1)))
 
 def main():
     output = 0
