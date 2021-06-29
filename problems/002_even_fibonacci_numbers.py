@@ -1,11 +1,7 @@
 def fibonacci_generator(stop):
-
 	penultimate, ultimate = 0, 1
-
 	while ultimate < stop:
-
 		yield (next := penultimate + ultimate)
-
 		penultimate, ultimate = ultimate, next
 		
 
